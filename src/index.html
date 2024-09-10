@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>PKCE Example</title>
+    <link rel="stylesheet" type="text/css" href="genesys-webcomponents.css"/>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+    <gux-form-beta>
+      <form>
+        <header>
+          <gux-form-heading>
+            <h1>PKCE Example</h1>
+          </gux-form-heading>
+        </header>
+        <fieldset>
+          <legend>
+            <gux-form-fieldset-heading>
+              <h2>PKCE Parameters</h2>
+            </gux-form-fieldset-heading>
+          </legend>
+
+          <gux-form-field-text-like label-position="above">
+            <label slot="label">Code Verifier</label>
+            <input slot="input" id="code-verifier" type="text" readonly/>
+          </gux-form-field-text-like>
+
+          <gux-form-field-text-like label-position="above">
+            <label slot="label">Code Challenge</label>
+            <input slot="input" id="code-challenge" type="text" readonly/>
+          </gux-form-field-text-like>
+
+          <gux-form-field-text-like label-position="above">
+            <label slot="label">Access Token</label>
+            <input slot="input" id="access-token" type="text" readonly/>
+          </gux-form-field-text-like>
+        </fieldset> 
+
+        <gux-form-footer>
+          <footer>
+            <gux-button id="request-token" type="button" accent="primary">Get Access Token</gux-button>
+            <gux-button id="clear-token" type="button" accent="secondary" disabled>Clear Access Token</gux-button>
+          </footer>
+        </gux-form-footer>
+      </form>
+    </gux-form-beta>
+
+    <pre id="me-response">The public API response will display here</pre>
+
+    <script src="main.js"></script>
+  </body>
+</html>
