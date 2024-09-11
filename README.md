@@ -1,19 +1,30 @@
 PKCE Example
 ============
 
-Authorization Request
+Build the web app:
+```
+make
+```
+
+Run the web app:
+```
+npm start
+```
+
+1. Request an authorization code:
 ```
 https://login.inindca.com/oauth/authorize?client_id=a64ab37d-b6f4-4c67-bb02-425255a7cc09&response_type=code&redirect_uri=http://localhost:7890/&code_challenge=<code challenge>&code_challenge_method=S256
 ```
 
-Token Request
+2. Request an access token:
 ```
 curl -X POST https://login.inindca.com/oauth/token \
-  -d grant_type=authorization_code -d code=<authorization code> \
-  --data-urlencode redirect_uri=http://localhost:7890/callback \
-  -d client_id=a64ab37d-b6f4-4c67-bb02-425255a7cc09 \
-  -d code_verifier=<code verifier> \
-  -d code_challenge_method=S256 -i
+  --data grant_type=authorization_code -d code=<authorization code> \
+  --data-urlencode redirect_uri=http://localhost:7890/ \
+  --data client_id=a64ab37d-b6f4-4c67-bb02-425255a7cc09 \
+  --data code_verifier=<code verifier> \
+  --data code_challenge_method=S256 \
+  -i
 ```
 
 Useful Links

@@ -10,7 +10,6 @@
 			},
 			"problemMatcher": [],
 			"label": "npm: build",
-			"detail": "make build"
 		},
 		{
 			"type": "npm",
@@ -21,7 +20,13 @@
 			},
 			"problemMatcher": [],
 			"label": "npm: test",
-			"detail": "echo \"Error: no test specified\" && exit 1"
+		},
+		{
+			"type": "npm",
+			"script": "start",
+			"problemMatcher": [],
+			"label": "npm: start",
+			"isBackground": true
 		}
 	]
 }
