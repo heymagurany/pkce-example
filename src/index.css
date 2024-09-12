@@ -1,6 +1,15 @@
-#me-response {
-  background-color: #eff0fe;
-  border: 1px solid #4856cb;
-  border-radius: 4px;
-  padding: 8px;
+.pkce-form {
+  max-width: 100%;
+
+  label {
+    display: block;
+    font-weight: bold;
+  }
+
+  #me-response {
+    background-color: #eff0fe;
+    border: 1px solid #4856cb;
+    border-radius: 4px;
+    padding: 8px;
+  }
 }

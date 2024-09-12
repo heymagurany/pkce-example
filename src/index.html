@@ -7,34 +7,36 @@
   </head>
   <body>
     <gux-form-beta>
-      <form>
+      <form class="pkce-form">
         <header>
           <gux-form-heading>
             <h1>PKCE Example</h1>
           </gux-form-heading>
         </header>
         <fieldset>
-          <legend>
-            <gux-form-fieldset-heading>
-              <h2>PKCE Parameters</h2>
-            </gux-form-fieldset-heading>
-          </legend>
-
-          <gux-form-field-text-like label-position="above">
+          <div>
             <label slot="label">Code Verifier</label>
-            <input slot="input" id="code-verifier" type="text" readonly/>
-          </gux-form-field-text-like>
+            <gux-copy-to-clipboard>
+              <div slot="content" id="code-verifier"></div>
+            </gux-copy-to-clipboard>
+          </div>
 
-          <gux-form-field-text-like label-position="above">
+          <div>
             <label slot="label">Code Challenge</label>
-            <input slot="input" id="code-challenge" type="text" readonly/>
-          </gux-form-field-text-like>
+            <gux-copy-to-clipboard>
+              <div slot="content" id="code-challenge"></div>
+            </gux-copy-to-clipboard>
+          </div>
 
-          <gux-form-field-text-like label-position="above">
+          <div>
             <label slot="label">Access Token</label>
-            <input slot="input" id="access-token" type="text" readonly/>
-          </gux-form-field-text-like>
-        </fieldset> 
+            <gux-copy-to-clipboard>
+              <div slot="content" id="access-token">Not authenticated</div>
+            </gux-copy-to-clipboard>
+          </div>
+        </fieldset>
+
+        <pre id="me-response">The public API response will display here</pre>
 
         <gux-form-footer>
           <footer>
@@ -44,8 +46,6 @@
         </gux-form-footer>
       </form>
     </gux-form-beta>
-
-    <pre id="me-response">The public API response will display here</pre>
 
     <script src="index.js"></script>
   </body>
