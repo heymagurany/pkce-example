@@ -1,6 +1,11 @@
 PKCE Example
 ============
 
+Prerequisites
+-------------
+* [Node.js v20](https://nodejs.org/en/download/package-manager/current) or [Node Version Manager](https://github.com/nvm-sh/nvm)
+* [A generated .npmrc from npm-utils](https://bitbucket.org/inindca/npm-utils/src/)
+
 Build the web app:
 ```
 make
